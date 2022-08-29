@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Daihatsu Mira Interior",
+        "image": "https://storage.cloud.google.com/rental_cars/Daihatsu%20Mira%20Interior.jpg",
+        "rentPerHour": 1000,
+        "fuelType": "petrol",
+        "bookedTimeSlots": [],
+        "capacity": 4
+    },
+    {
+        "name": "Honda Civic 2019",
+        "image": "https://storage.cloud.google.com/rental_cars/Honda%20Civic%202019.jpg",
+        "rentPerHour": 2500,
+        "fuelType": "petrol",
+        "bookedTimeSlots": [],
+        "capacity": 5
+    },
+    {
+        "name": "Hyundai Elantra 2022",
+        "image": "https://storage.cloud.google.com/rental_cars/Hyundai%20Elantra%202022.jpg",
+        "rentPerHour": 3500,
+        "fuelType": "petrol",
+        "bookedTimeSlots": [],
+        "capacity": 5
+    },
+    {
+        "name": "KIA Sportage 2020",
+        "image": "https://storage.cloud.google.com/rental_cars/KIA%20Sportage%202020.webp",
+        "rentPerHour": 2500,
+        "fuelType": "petrol",
+        "bookedTimeSlots": [],
+        "capacity": 5
+    },
+    {
+        "name": "Nissan Kicks E-Power 2020",
+        "image": "https://storage.cloud.google.com/rental_cars/Nissan%20Kicks%20E-Power%202020.jpg",
+        "rentPerHour": 2500,
+        "fuelType": "petrol",
+        "bookedTimeSlots": [],
+        "capacity": 5
+    },
+    {
+        "name": "Porsche Cayenne E-Hybrid 2019",
+        "image": "https://storage.cloud.google.com/rental_cars/Porsche%20Cayenne%20e-hybrid%202019.jpg",
+        "rentPerHour": 4500,
+        "fuelType": "petrol",
+        "bookedTimeSlots": [],
+        "capacity": 5
+    },
+    {
+        "name": "Suzuki Swift DLX 2022",
+        "image": "https://storage.cloud.google.com/rental_cars/Suzuki%20Swift%20%20DLX%202022.jpg",
+        "rentPerHour": 2500,
+        "fuelType": "petrol",
+        "bookedTimeSlots": [],
+        "capacity": 4
+    },
+    {
+        "name": "Toyota Passo 2021",
+        "image": "https://storage.cloud.google.com/rental_cars/Toyota%20Passo%202021.jpg",
+        "rentPerHour": 1500,
+        "fuelType": "petrol",
+        "bookedTimeSlots": [],
+        "capacity": 4
+    }
+]

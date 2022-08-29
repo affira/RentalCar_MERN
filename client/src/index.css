@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Bahiana', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #cbb2b5;
+  /*seashell*/
+}
+
+code {
+  font-family: 'Bahiana', cursive;
+  /*font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;*/
+}
+
+.bs1 {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+h1 {
+  font-family: 'Bahiana', cursive;
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(112, 101, 104);
+
+}
+
+p {
+  font-family: 'Bahiana', cursive;
+  margin: 5px !important;
+  /*text-align: left ;*/
+  padding: 0;
+}
+
+.btn-1 {
+  font-family: 'Bahiana', cursive;
+  box-shadow: none !important;
+  background-color: #cbb2b5  !important;
+  color: #706568 !important;
+  /*#a56f62 #cbb2b5 #a36540 #706568 #e2d6de 967982*/
+  border: 2px solid #e2d6de !important;
+}
+.btnLogin {
+  font-family: 'Bahiana', cursive;
+  box-shadow: none !important;
+  background-color: #967982  !important;
+  color: #f5af9f !important;
+  /*#a56f62 #cbb2b5 #a36540 #706568 #e2d6de 967982*/
+  border: 2px solid #f5af9f !important;
+  padding: 5px 15px !important;
+ 
+
+}
+.btnLogin:focus{
+  border: none !important;
+}
+
+.header {
+  font-family: 'Bahiana', cursive;
+  font-size:40px;
+  padding: 5px;
+  background-color: #e2d6de;
+}
+.header .ant-btn{
+  
+  box-shadow: none !important;
+  background-color: #cbb2b5  !important;
+  color: #706568 !important;
+  border: 2px solid #e2d6de !important;
+}
+
+.content {
+  font-family: 'Bahiana', cursive;
+  font-size:large;
+  min-height: 90vh;
+
+}
+
+
+.loader {
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 9999;
+}
+
+.car {
+
+  border-radius: 7px;
+  margin-top: 100px;
+  height: 190px;
+  transition: 0.3s;
+}
+
+.car:hover{
+  height: 240px;
+}
+.car:hover > .carContent{
+  opacity: 1;
+  transform: translateY(-50px);
+}
+.carImg {
+  height: 210px;
+  width: 90%;
+  border-radius: 15px;
+  transform: translateY(-50px);
+}
+.carContent {
+  font-family: 'Bahiana', cursive;
+  font-size:large;
+  transform: translateY(-200px);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.login{
+  background-color: #706568;
+  padding-top: 15px;
+  padding-right: 20px;
+  
+  min-height: 100vh;
+}
+.login label, .login h2{
+  font-family: 'Bahiana', cursive;
+  color: #f59f9f  !important;
+  opacity: 0.8;
+}
+.login h1{
+  font-family: 'Bahiana', cursive;
+  color: #fcbcac  !important;
+  opacity: 1;
+}
+.login-form{
+  font-family: 'Bahiana', cursive;
+  
+background-color: #967982;
+}
+.login-form Input{
+  font-family: 'Bahiana', cursive;
+background-color: #debeb8 !important;
+border: none !important;
+color:#706568;
+opacity: 1;
+font-size: medium;
+}
+
+.login-logo{
+  font-family: 'Bahiana', cursive;
+  position:absolute;
+  left: 0;
+  right: 0;
+  top:55%;
+  bottom:45%;
+  font-size: 80px;
+  transform: translateY(-50%, -50%) ;
+  opacity: 0.7 !important;
+}
+.login a{
+  color: #f5af9f;
+  opacity: 0.5;
+
+}
+.carImageBook{
+  height: 300px;
+  border-radius: 15px;
+  width: auto;
+}
