@@ -8,8 +8,11 @@ import { useEffect, useState } from "react";
 import Loader from "../Components/Loader";
 import moment from 'moment';
 //import Loader from "../Components/Loader"; const {loading} = useSelector(state => state.alertReducer); {loading === true && (<Loader/>)}
-import { Row, Col, Divider, DatePicker, Checkbox, Button, Modal } from 'antd';
+import { Row, Col, Divider, DatePicker, Checkbox, Modal } from 'antd';
 import { bookCar } from "../Redux/actions/bookingAction";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 
 
@@ -86,13 +89,13 @@ function BookingCar() {
       {loading === true && (<Loader />)}
 
       <Row justify="center" className="d-flex align-items-center" style={{ minHeight: '90vh' }} >
-        <Col lg={10} sm={24} xs={24} >
-          <img className="carImageBook bs1" src={car.image} alt=""></img>
+        <Col lg={10} sm={24} xs={24} className='p-3' >
+          <img className="carImageBook bs1 w-100" src={car.image} alt="" data-aos='flip-left' data-aos-duration='1500'></img>
 
         </Col>
 
         <Col lg={10} sm={24} xs={24} >
-          <Divider orientation="" type="horizontal" dashed>
+          <Divider style={{borderColor: "black"}} type="horizontal" dashed>
             CAR INFO
           </Divider>
           <div className='text-right'>
@@ -102,15 +105,15 @@ function BookingCar() {
             <p>Max Passengers: {car.capacity}</p>
 
           </div>
-          <Divider orientation="" type="horizontal" dashed>
+          <Divider style={{borderColor: "black"}} type="horizontal" dashed>
             HOURS TO RENT
           </Divider>
           <RangePicker showTime={{ format: 'HH:mm' }} format='MMM/DD/YYYY HH:mm' onChange={selectTimeSlots} />
 
           <br />
-          <Button className='btn-1 mt-2' onClick={() => { setShowModal(true); }}>
+          <button className='btn-1 mt-2' onClick={() => { setShowModal(true); }}>
             SEE BOOKED SLOTS
-          </Button>
+          </button>
 
           {from && to && (
 
@@ -126,7 +129,7 @@ function BookingCar() {
                 }
               }}>DRIVER REQUIRED</Checkbox>
               <h3>TOTAL AMOUNT: {totalAmount}</h3>
-              <Button className="btn-1" onClick={bookNow}>BOOK NOW</Button>
+              <button className="btn-1" onClick={bookNow}>BOOK NOW</button>
 
             </div>)}
 
@@ -139,14 +142,14 @@ function BookingCar() {
 
           <div className="p-2">
             {car.bookedTimeSlots.map((slot) => {
-              return <Button className="btn-1 mt-2">
+              return <button className="btn-1 mt-2">
                 {slot.from} - {slot.to}
-              </Button>
+              </button>
             })}
             <div className="text-right mt-5">
-              <Button className="btn-1" onClick={() => { setShowModal(false); }}>
+              <button className="btn-1" onClick={() => { setShowModal(false); }}>
                 CLOSE
-              </Button>
+              </button>
             </div>
 
 

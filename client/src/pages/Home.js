@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { getAllCars } from "../Redux/actions/carsAction";
 import Loader from "../Components/Loader";
-import { Row, Col, Divider, DatePicker, Checkbox, Button } from 'antd';
+import { Row, Col,DatePicker} from 'antd';
 import React from 'react';
 import moment from 'moment';
 
@@ -69,22 +69,22 @@ function Home() {
       </Row>
 
       {loading === true && (<Loader />)}
-      <Row justify='center' gutter={23} className='mt-5'>
+      <Row justify='center' gutter={23} className='mt-3'>
         {totalCars.map(car => {
           return <Col lg={7} sm={30} xs={30}>
             <div className="car p-2 bs1">
               <img src={car.image} className="carImg" alt="" />
 
               <div className="carContent d-flex align-items-center justify-content-between">
-                <div>
+                <div className="text-left pl-2">
 
                   <p>{car.name}</p>
-                  <p>{car.rentPerHour} Rent  Per  Hour  /-</p>
+                  <p> Rent  Per  Hour: {car.rentPerHour}/-</p>
 
                 </div>
 
                 <div>
-                  <Button className="btn-1 mr-3"><Link to={`/booking-car/${car._id}`}> Book  Now</Link></Button>
+                  <button className="btn-1 mr-3"><Link to={`/booking-car/${car._id}`}> Book  Now</Link></button>
                 </div>
 
               </div>

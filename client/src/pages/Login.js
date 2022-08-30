@@ -5,7 +5,7 @@ import { Row, Col, Form, Input } from 'antd';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import Loader from "../Components/Loader";
-import { userLogin } from '../Redux/actions/userActions';
+import { userLogin} from '../Redux/actions/userActions';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
@@ -15,11 +15,13 @@ AOS.init();
 
 function Login() {
 
-  const { loading } = useSelector(state => state.alertsReducer)
+  const { loading } = useSelector(state => state.alertsReducer);
 
   const dispatch = useDispatch()
   function onFinish(values) {
-    dispatch(userLogin(values))
+    dispatch(userLogin(values));
+    
+
     //console.log(values)
   }
 

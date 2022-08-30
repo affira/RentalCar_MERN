@@ -15,9 +15,6 @@ export const bookCar = (reqObj) => async dispatch => {
 
         }, 500);
 
-        
-
-
     } catch (error) {
         console.log(error)
         dispatch({ type: 'LOADING', payload: false })

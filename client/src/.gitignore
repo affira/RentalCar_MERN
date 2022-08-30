@@ -11,6 +11,7 @@
 /setupTests.js
 /.pnp
 .pnp.js
+/.git
 
 # testing
 /coverage

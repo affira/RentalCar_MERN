@@ -1,7 +1,6 @@
 /* eslint-disable react/jsx-pascal-case */
 import { Button, Dropdown, Menu, Row, Col } from 'antd';
 import React from 'react';
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
@@ -22,7 +21,7 @@ function DefaultLayout(props) {
                 },
                 {
                     key: '3',
-                    label: (<a href=''> Profile </a>),
+                    label: (<a href='/admin'> Admin </a>),
                 },
                 {
                     key: '4',
@@ -45,7 +44,7 @@ function DefaultLayout(props) {
                 <Row gutter={16} justify='center'>
                     <Col lg={20} sm={24} xs={24}>
                         <div className="d-flex justify-content-between">
-                            <h1><Link to='/' style={{ color: '#706568'}}><img src='https://storage.cloud.google.com/rental_cars/LogoR.png' height='40' width='80'></img> RENTAL CARS</Link></h1>
+                            <h1><Link to='/' style={{ color: '#706568' }}><img src='https://storage.cloud.google.com/rental_cars/LogoR.png' height='40' width='80'></img> RENTAL CARS</Link></h1>
 
                             <Dropdown overlay={menu} placement="bottom" arrow>
                                 <Button> | | | {user.username} | | | </Button>
@@ -60,10 +59,12 @@ function DefaultLayout(props) {
 
             </div>
 
-            <div className="content">
-                {props.children}
-
-
+            <div className="content"> {props.children} </div>
+            <hr />
+            <div className='footer text-center'>
+                
+                <p> DESIGNED AND DEVELOPED BY </p>
+                <p> Afeera </p>
             </div>
         </div>
     );

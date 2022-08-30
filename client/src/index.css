@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Bahiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap');
 
 body {
-  margin: 0;
-  font-family: 'Bahiana', cursive;
+  margin: 0px;
+  font-family: 'Dosis', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #cbb2b5;
@@ -10,7 +10,7 @@ body {
 }
 
 code {
-  font-family: 'Bahiana', cursive;
+  font-family: 'Dosis', sans-serif;
   /*font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;*/
 }
@@ -20,30 +20,37 @@ code {
 }
 
 h1 {
-  font-family: 'Bahiana', cursive;
-  font-size: 50px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 30px;
   font-weight: bold;
   color: rgb(112, 101, 104);
 
 }
 
 p {
-  font-family: 'Bahiana', cursive;
+  font-family: 'Dosis', sans-serif;
   margin: 5px !important;
   /*text-align: left ;*/
   padding: 0;
 }
 
 .btn-1 {
-  font-family: 'Bahiana', cursive;
+  font-family: 'Dosis', sans-serif;
+  font-size: 20px;
   box-shadow: none !important;
   background-color: #cbb2b5  !important;
   color: #706568 !important;
   /*#a56f62 #cbb2b5 #a36540 #706568 #e2d6de 967982*/
   border: 2px solid #e2d6de !important;
 }
+Link{
+  color: #706568 !important;
+}
+a{
+  color: #706568 !important;
+}
 .btnLogin {
-  font-family: 'Bahiana', cursive;
+  font-family: 'Dosis', sans-serif;
   box-shadow: none !important;
   background-color: #967982  !important;
   color: #f5af9f !important;
@@ -58,7 +65,7 @@ p {
 }
 
 .header {
-  font-family: 'Bahiana', cursive;
+  font-family: 'Dosis', sans-serif;
   font-size:40px;
   padding: 5px;
   background-color: #e2d6de;
@@ -72,7 +79,7 @@ p {
 }
 
 .content {
-  font-family: 'Bahiana', cursive;
+  font-family: 'Dosis', sans-serif;
   font-size:large;
   min-height: 90vh;
 
@@ -109,7 +116,7 @@ p {
   transform: translateY(-50px);
 }
 .carContent {
-  font-family: 'Bahiana', cursive;
+  font-family: 'Dosis', sans-serif;
   font-size:large;
   transform: translateY(-200px);
   opacity: 0;
@@ -124,22 +131,22 @@ p {
   min-height: 100vh;
 }
 .login label, .login h2{
-  font-family: 'Bahiana', cursive;
+  font-family: 'Dosis', sans-serif;
   color: #f59f9f  !important;
   opacity: 0.8;
 }
 .login h1{
-  font-family: 'Bahiana', cursive;
+  font-family: 'Dosis', sans-serif;
   color: #fcbcac  !important;
   opacity: 1;
 }
 .login-form{
-  font-family: 'Bahiana', cursive;
+  font-family: 'Dosis', sans-serif;
   
 background-color: #967982;
 }
 .login-form Input{
-  font-family: 'Bahiana', cursive;
+  font-family: 'Dosis', sans-serif;
 background-color: #debeb8 !important;
 border: none !important;
 color:#706568;
@@ -148,7 +155,7 @@ font-size: medium;
 }
 
 .login-logo{
-  font-family: 'Bahiana', cursive;
+  font-family: 'Dosis', sans-serif;
   position:absolute;
   left: 0;
   right: 0;
@@ -167,4 +174,16 @@ font-size: medium;
   height: 300px;
   border-radius: 15px;
   width: auto;
+}
+
+svg{
+  height: 20px !important;
+  width:20px !important ;
+}
+li{
+  color:#706568 !important;
+}
+.footer{
+  background-color:#e2d6de ;
+  padding: 5px;
 }

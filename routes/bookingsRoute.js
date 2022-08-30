@@ -11,7 +11,7 @@ router.post("/bookcar", async (req, res) => {
     try {
         const newbooking = new Booking(req.body);
         await newbooking.save();
-        console.log('record saved');
+        //console.log('record saved');
         const car = await Car.findOne({ _id: req.body.car });
         console.log(req.body.car);
         car.bookedTimeSlots.push(req.body.bookedTimeSlots);

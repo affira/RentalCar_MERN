@@ -8,6 +8,9 @@ import BookingCar from './pages/BookingCar'
 import UserBookings from './pages/UserBookings';
 import 'antd/dist/antd.css';
 import ProtectedRoute from './Components/ProtectedRoute';
+import AddCar from './pages/AddCar';
+import AdminHome from './pages/AdminHome';
+import EditCar from './pages/EditCar';
 
 //${car._id}/:carid'
 
@@ -30,12 +33,25 @@ function App() {
           <Route path='/' element={<ProtectedRoute />}>
             <Route path='/' element={<Home />} />
           </Route>
+
           <Route path='/booking-car/:carid' element={<ProtectedRoute />}>
             <Route path='/booking-car/:carid' exact element={<BookingCar />} />
           </Route>
 
           <Route path='/user-bookings' element={<ProtectedRoute />}>
             <Route path='/user-bookings' element={<UserBookings />} />
+          </Route>
+
+          <Route path='/add-car' element={<ProtectedRoute />}>
+            <Route path='/add-car' element={<AddCar />} />
+          </Route>
+
+          <Route path='/admin' element={<ProtectedRoute />}>
+            <Route path='/admin' element={<AdminHome />} />
+          </Route>
+
+          <Route path='/edit-car/:carid' element={<ProtectedRoute />}>
+            <Route path='/edit-car/:carid' element={<EditCar />} />
           </Route>
 
 
