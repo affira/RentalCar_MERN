@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { getAllCars } from "../Redux/actions/carsAction";
 import Loader from "../Components/Loader";
-import { Row, Col,DatePicker} from 'antd';
+import { Row, Col, DatePicker } from 'antd';
 import React from 'react';
 import moment from 'moment';
 
@@ -47,7 +47,7 @@ function Home() {
             moment(booking.from).isBetween(selectedFrom, selectedTo) ||
             moment(booking.to).isBetween(selectedFrom, selectedTo)) {
           }
-          else{
+          else {
             temp.push(car);
           }
         }
@@ -60,39 +60,41 @@ function Home() {
 
   return (
 
+
     <DefaultLayout >
+      <div className="home">
+        <Row className="mt-3" justify="center">
+          <Col lg={20} sm={24} className="d-flex justify-content-left">
+            <RangePicker showTime={{ format: 'HH:mm' }} format='MMM/DD/YYYY HH:mm' onChange={setFilter}></RangePicker>
+          </Col>
+        </Row>
 
-      <Row className="mt-3" justify="center">
-        <Col lg={20} sm={24} className="d-flex justify-content-left">
-          <RangePicker showTime={{ format: 'HH:mm' }} format='MMM/DD/YYYY HH:mm' onChange={setFilter}></RangePicker>
-        </Col>
-      </Row>
+        {loading === true && (<Loader />)}
+        <Row justify='center' gutter={23} className='mt-3'>
+          {totalCars.map(car => {
+            return <Col lg={7} sm={30} xs={30}>
+              <div className="car p-2 bs1">
+                <img src={car.image} className="carImg" alt="" />
 
-      {loading === true && (<Loader />)}
-      <Row justify='center' gutter={23} className='mt-3'>
-        {totalCars.map(car => {
-          return <Col lg={7} sm={30} xs={30}>
-            <div className="car p-2 bs1">
-              <img src={car.image} className="carImg" alt="" />
+                <div className="carContent d-flex align-items-center justify-content-between">
+                  <div className="text-left pl-2">
 
-              <div className="carContent d-flex align-items-center justify-content-between">
-                <div className="text-left pl-2">
+                    <p>{car.name}</p>
+                    <p> Rent  Per  Hour: {car.rentPerHour}/-</p>
 
-                  <p>{car.name}</p>
-                  <p> Rent  Per  Hour: {car.rentPerHour}/-</p>
+                  </div>
 
-                </div>
+                  <div>
+                    <button className="btn-1 mr-3"><a href={`/booking-car/${car._id}`} > Book  Now</a></button>
+                  </div>
 
-                <div>
-                  <button className="btn-1 mr-3"><Link to={`/booking-car/${car._id}`}> Book  Now</Link></button>
                 </div>
 
               </div>
-
-            </div>
-          </Col>
-        })}
-      </Row>
+            </Col>
+          })}
+        </Row>
+      </div>
     </DefaultLayout>
   );
 };

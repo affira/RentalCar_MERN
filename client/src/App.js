@@ -11,6 +11,8 @@ import ProtectedRoute from './Components/ProtectedRoute';
 import AddCar from './pages/AddCar';
 import AdminHome from './pages/AdminHome';
 import EditCar from './pages/EditCar';
+import AdminLogin from './pages/AdminLogin'
+
 
 //${car._id}/:carid'
 
@@ -28,6 +30,7 @@ function App() {
         <Routes>
 
           <Route path='/login' element={<Login />} />
+          <Route path='/admin/login' element={<AdminLogin />} />
           <Route path='/register' element={<Register />} />
 
           <Route path='/' element={<ProtectedRoute />}>

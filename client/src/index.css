@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap');
 
+* {
+  font-family: 'Dosis', sans-serif !important;
+}
+
+
 body {
   margin: 0px;
-  font-family: 'Dosis', sans-serif;
+  /* font-family: 'Dosis', sans-serif !important; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #cbb2b5;
@@ -10,7 +15,7 @@ body {
 }
 
 code {
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Dosis', sans-serif !important;
   /*font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;*/
 }
@@ -20,7 +25,7 @@ code {
 }
 
 h1 {
-  font-family: 'Dosis', sans-serif;
+  /* font-family: 'Dosis', sans-serif; */
   font-size: 30px;
   font-weight: bold;
   color: rgb(112, 101, 104);
@@ -28,66 +33,63 @@ h1 {
 }
 
 p {
-  font-family: 'Dosis', sans-serif;
+  /* font-family: 'Dosis', sans-serif; */
   margin: 5px !important;
   /*text-align: left ;*/
   padding: 0;
 }
 
 .btn-1 {
-  font-family: 'Dosis', sans-serif;
+  /* font-family: 'Dosis', sans-serif; */
   font-size: 20px;
   box-shadow: none !important;
-  background-color: #cbb2b5  !important;
+  background-color: #cbb2b5 !important;
   color: #706568 !important;
   /*#a56f62 #cbb2b5 #a36540 #706568 #e2d6de 967982*/
   border: 2px solid #e2d6de !important;
 }
-Link{
-  color: #706568 !important;
-}
-a{
-  color: #706568 !important;
-}
+
+
+
 .btnLogin {
-  font-family: 'Dosis', sans-serif;
+  /* font-family: 'Dosis', sans-serif; */
   box-shadow: none !important;
-  background-color: #967982  !important;
+  background-color: #967982 !important;
   color: #f5af9f !important;
   /*#a56f62 #cbb2b5 #a36540 #706568 #e2d6de 967982*/
   border: 2px solid #f5af9f !important;
   padding: 5px 15px !important;
- 
-
 }
-.btnLogin:focus{
+
+.btnLogin:focus {
   border: none !important;
 }
 
 .header {
-  font-family: 'Dosis', sans-serif;
-  font-size:40px;
+  /* font-family: 'Dosis', sans-serif; */
+  font-size: 40px;
   padding: 5px;
   background-color: #e2d6de;
 }
-.header .ant-btn{
-  
+
+.header .ant-btn {
+
   box-shadow: none !important;
-  background-color: #cbb2b5  !important;
+  background-color: #cbb2b5 !important;
   color: #706568 !important;
   border: 2px solid #e2d6de !important;
 }
 
 .content {
-  font-family: 'Dosis', sans-serif;
-  font-size:large;
+  /* font-family: 'Dosis', sans-serif; */
+  font-size: large;
   min-height: 90vh;
 
 }
 
 
 .loader {
-  
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -102,88 +104,129 @@ a{
   transition: 0.3s;
 }
 
-.car:hover{
+.car:hover {
   height: 240px;
 }
-.car:hover > .carContent{
+
+.car:hover>.carContent {
   opacity: 1;
   transform: translateY(-50px);
 }
+
 .carImg {
   height: 210px;
   width: 90%;
   border-radius: 15px;
   transform: translateY(-50px);
 }
+
 .carContent {
-  font-family: 'Dosis', sans-serif;
-  font-size:large;
+  /* font-family: 'Dosis', sans-serif; */
+  font-size: large;
   transform: translateY(-200px);
   opacity: 0;
   transition: 0.3s;
 }
 
-.login{
+.login {
   background-color: #706568;
   padding-top: 15px;
   padding-right: 20px;
-  
+
   min-height: 100vh;
 }
-.login label, .login h2{
-  font-family: 'Dosis', sans-serif;
-  color: #f59f9f  !important;
+
+.login label,
+.login h2 {
+  /* font-family: 'Dosis', sans-serif; */
+  color: #f59f9f !important;
   opacity: 0.8;
 }
-.login h1{
-  font-family: 'Dosis', sans-serif;
-  color: #fcbcac  !important;
+
+.login h1 {
+  /* font-family: 'Dosis', sans-serif; */
+  color: #fcbcac !important;
   opacity: 1;
 }
-.login-form{
-  font-family: 'Dosis', sans-serif;
-  
-background-color: #967982;
-}
-.login-form Input{
-  font-family: 'Dosis', sans-serif;
-background-color: #debeb8 !important;
-border: none !important;
-color:#706568;
-opacity: 1;
-font-size: medium;
+
+.login-form {
+  /* font-family: 'Dosis', sans-serif; */
+
+  background-color: #967982;
 }
 
-.login-logo{
+.login-form Input {
   font-family: 'Dosis', sans-serif;
-  position:absolute;
+  background-color: #debeb8 !important;
+  border: none !important;
+  color: #706568;
+  opacity: 1;
+  font-size: medium;
+}
+
+
+.ant-input-affix-wrapper {
+  font-family: 'Dosis', sans-serif;
+  background-color: #debeb8 !important;
+  border: none !important;
+  color: #706568;
+  opacity: 1;
+  font-size: medium;
+}
+
+.ant-input::placeholder {
+  color: #706568 !important;
+  opacity: 0.3;
+
+
+}
+
+.login-logo {
+  font-family: 'Dosis', sans-serif;
+  position: absolute;
   left: 0;
   right: 0;
-  top:55%;
-  bottom:45%;
+  top: 55%;
+  bottom: 45%;
   font-size: 80px;
-  transform: translateY(-50%, -50%) ;
+  transform: translateY(-50%, -50%);
   opacity: 0.7 !important;
 }
-.login a{
+
+.login a {
   color: #f5af9f;
   opacity: 0.5;
 
 }
-.carImageBook{
+
+.home a,
+.admin a {
+  color: #706568;
+  opacity: 0.5;
+}
+
+.home a:hover ,
+.admin a:hover {
+  color: #3c2b23;
+}
+
+
+.carImageBook {
   height: 300px;
   border-radius: 15px;
   width: auto;
 }
 
-svg{
+svg {
   height: 20px !important;
-  width:20px !important ;
+  width: 20px !important;
 }
-li{
-  color:#706568 !important;
+
+li {
+  color: #706568 !important;
 }
-.footer{
-  background-color:#e2d6de ;
+
+.footer {
+  background-color: #e2d6de;
   padding: 5px;
 }

@@ -25,35 +25,37 @@ function UserBookings() {
 
     return (
         <DefaultLayout>
-            {loading === true && (<Loader />)}
-            <h3 className='text-center mt-2'>MY BOOKINGS</h3>
+            <div className='userBookings'>
+                {loading === true && (<Loader />)}
+                <h3 className='text-center mt-2'>MY BOOKINGS</h3>
 
-            <Row justify='center' gutter={16}>
-                <Col lg={15} sm={24}>
+                <Row justify='center' gutter={16}>
+                    <Col lg={15} sm={24}>
 
-                    {bookings.filter(o=>o.user==user._id).map(booking => {
-                        return <Row gutter={16} className='bs1 m-3' >
+                        {bookings.filter(o => o.user == user._id).map(booking => {
+                            return <Row gutter={16} className='bs1 m-3' >
 
-                            <Col lg={7} sm={24}>
-                                <p><b>{booking.car.name}</b></p>
-                                <p>RENT PER HOUR:  <b>{booking.car.rentPerHour}</b></p>
-                                <p>TOTAL HOURS:  <b>{booking.TotalHours}</b></p>
-                                <p>TOTAL AMOUNT:  <b>{booking.totalAmount}</b></p>
-                            </Col>
-                            <Col lg={10} sm={24}>
-                                <p>BOOKED FROM:  <b>{booking.bookedTimeSlots.from}</b></p>
-                                <p>BOOKED TO:  <b>{booking.bookedTimeSlots.to}</b></p>
-                                <p>DATE OF BOOKING:  <b>{moment(booking.createdAt).format('MMM DD YYYY')}</b></p>
-                            </Col>
-                            <Col lg={7} sm={24} className='text-right'>
-                                <img style={{ borderRadius: 5 }} src={booking.car.image} height='150' className='p-2'></img>
-                            </Col>
+                                <Col lg={7} sm={24}>
+                                    <p><b>{booking.car.name}</b></p>
+                                    <p>RENT PER HOUR:  <b>{booking.car.rentPerHour}</b></p>
+                                    <p>TOTAL HOURS:  <b>{booking.TotalHours}</b></p>
+                                    <p>TOTAL AMOUNT:  <b>{booking.totalAmount}</b></p>
+                                </Col>
+                                <Col lg={10} sm={24}>
+                                    <p>BOOKED FROM:  <b>{booking.bookedTimeSlots.from}</b></p>
+                                    <p>BOOKED TO:  <b>{booking.bookedTimeSlots.to}</b></p>
+                                    <p>DATE OF BOOKING:  <b>{moment(booking.createdAt).format('MMM DD YYYY')}</b></p>
+                                </Col>
+                                <Col lg={7} sm={24} className='text-right'>
+                                    <img style={{ borderRadius: 5 }} src={booking.car.image} height='150' className='p-2'></img>
+                                </Col>
 
-                        </Row>
-                    })}
+                            </Row>
+                        })}
 
-                </Col>
-            </Row>
+                    </Col>
+                </Row>
+            </div>
         </DefaultLayout>
     )
 }
