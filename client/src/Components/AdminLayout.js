@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 function DefaultLayout(props) {
-    const user = JSON.parse(localStorage.getItem('user'));
+    const admin = JSON.parse(localStorage.getItem('admin'));
 
 
     const menu = (
@@ -13,16 +13,16 @@ function DefaultLayout(props) {
             items={[
                 {
                     key: '1',
-                    label: (<a href='/'> Home </a>),
+                    label: (<a href='/admin'>Home</a>),
                 },
                 {
                     key: '2',
-                    label: (<a href='/user-bookings'> Bookings </a>),
+                    label: (<a href='/add-car'> Add New Car </a>),
                 },
                 {
                     key: '3',
                     label: (<li onClick={() => {
-                        localStorage.removeItem('user');
+                        localStorage.removeItem('admin');
                         window.location.href = '/login';
                     }}> Logout </li>),
                 },
@@ -43,7 +43,7 @@ function DefaultLayout(props) {
                             <h1><Link to='/' style={{ color: '#706568' }}><img src='https://storage.cloud.google.com/rental_cars/LogoR.png' height='40' width='80'></img> RENTAL CARS</Link></h1>
 
                             <Dropdown overlay={menu} placement="bottom" arrow>
-                                <Button> | | | {user.username} | | | </Button>
+                                <Button> | | | {admin.username} | | | </Button>
 
                             </Dropdown>
 
@@ -58,7 +58,7 @@ function DefaultLayout(props) {
             <div className="content"> {props.children} </div>
             <hr />
             <div className='footer text-center'>
-                
+
                 <p> DESIGNED AND DEVELOPED BY </p>
                 <p> Afeera </p>
             </div>

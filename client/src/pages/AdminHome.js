@@ -1,4 +1,4 @@
-import DefaultLayout from "../Components/DefaultLayout";
+import AdminLayout from "../Components/AdminLayout";
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
@@ -35,14 +35,13 @@ function AdminHome() {
 
     return (
 
-        <DefaultLayout >
+        <AdminLayout>
             <div className="admin">
 
                 <Row justify="center" gutter={16} className='mt-4'>
                     <Col lg={20} sm={24}>
                         <div className="d-flex justify-content-between align-items-center">
                             <h3 className="mt-2 mr-4" style={{ color: '#706568' }}>ADMIN PANEL</h3>
-                            <button className="btn-1 pr-3 pl-3"><a href='/add-car'> ADD NEW CAR</a></button>
                         </div>
 
                     </Col>
@@ -89,7 +88,7 @@ function AdminHome() {
                     })}
                 </Row>
             </div>
-        </DefaultLayout>
+        </AdminLayout>
     );
 };
 export default AdminHome;

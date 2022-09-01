@@ -1,29 +1,23 @@
-//import DeafultLayout from "../Components/DefaultLayout";
-
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Row, Col, Form, Input } from 'antd';
-import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 import Loader from "../Components/Loader";
-import { userRegister } from '../Redux/actions/userActions';
+import { adminLogin } from '../Redux/actions/adminActions';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
+import 'aos/dist/aos.css';
 AOS.init();
 
 
 
+function AdminLogin() {
 
-
-function Register() {
-  const { loading } = useSelector(state => state.alertsReducer)
+  const { loading } = useSelector(state => state.alertsReducer);
 
   const dispatch = useDispatch()
   function onFinish(values) {
-
-    dispatch(userRegister(values));
-    console.log(values);
-  };
+    dispatch(adminLogin(values));
+  }
 
 
 
@@ -34,33 +28,31 @@ function Register() {
       <Row gutter={16} className="d-flex align-items-center">
         <Col lg={16} style={{ position: 'relative' }}>
           <img
-            data-aos='slide-left'
+            data-aos='slide-right'
             data-aos-duration='1500'
-            src='https://storage.cloud.google.com/rental_cars/LogoB.jpg' width='100%' alt='' />
+            src='https://storage.cloud.google.com/rental_cars/LogoBF.jpg' width='100%' alt="" />
           <h1 className="login-logo">RENTAL     CARS</h1>
 
         </Col>
         <Col lg={8} className='text-left p-5'>
           <Form layout="vertical" className="login-form p-5" onFinish={onFinish}>
-            <h2>R E G I S T E R</h2>
+            <h2>L O G I N</h2>
             <hr />
             <Form.Item name='username' label='U s e r n a m e' rules={[{ required: true }]}>
-              <Input placeholder="USERNAME" />
+              <Input />
             </Form.Item>
 
             <Form.Item name='password' label='P a s s w o r d' rules={[{ required: true }]}>
-              {<Input.Password placeholder="PASSWORD" />}
-            </Form.Item>
-
-            <Form.Item name='c_password' label='C o n f i r m   P a s s w o r d' rules={[{ required: true }]}>
-              {<Input.Password placeholder="CONFIRM PASSWORD" />}
+              <Input />
             </Form.Item>
 
 
-            <button className="btnLogin mt-2 mb-3"> R E G I S T E R </button>
+            <button className="btnLogin mt-2 mb-3"> L o g i n</button>
 
-            <br />
-            <Link to={'/login'}> CLICK HERE TO LOGIN </Link>
+            <hr/>
+          
+          <Link to={'/login'} className="Linkbtn" >USER LOGIN</Link>
+
 
           </Form>
         </Col>
@@ -71,4 +63,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default AdminLogin;

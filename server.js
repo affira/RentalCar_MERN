@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 
 app.use('/api/cars/', require('./routes/carsRoute'));
 app.use('/api/users/', require('./routes/usersRoute'));
-app.use('/api/admin/', require('./routes/adminRoute'));
+app.use('/api/admin', require('./routes/adminRoute'));
 app.use('/api/bookings/', require('./routes/bookingsRoute'));
 
 

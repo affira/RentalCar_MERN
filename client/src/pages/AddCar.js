@@ -1,5 +1,5 @@
 import React from 'react';
-import DefaultLayout from '../Components/DefaultLayout';
+import AdminLayout from '../Components/AdminLayout';
 import { Row, Col, Form, Input} from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import { addCars } from '../Redux/actions/carsAction';
@@ -24,12 +24,12 @@ function AddCar() {
 
 
     return (
-        <DefaultLayout>
+        <AdminLayout>
             {loading === true && (<Loader />)}
             <Row gutter={16} justify='center mt-5'>
                 <Col lg={12} sm={24} xs={24} className="p-3">
                     <Form className='bs1 p-2' layout='vertical' onFinish={onFinish}>
-                        <h3>ADD NEW CAR</h3>
+                        <h3 style={{color: '#706568'}}>ADD NEW CAR</h3>
                         <hr />
                         <Form.Item name='name' label='CAR NAME: ' rules={[{ required: true }]}>
                             <Input></Input>
@@ -53,7 +53,7 @@ function AddCar() {
                 </Col>
 
             </Row>
-        </DefaultLayout>
+        </AdminLayout>
     )
 }
 

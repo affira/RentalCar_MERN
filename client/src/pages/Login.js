@@ -42,6 +42,7 @@ function Login() {
 
         </Col>
         <Col lg={8} className='text-left p-5'>
+          
           <Form layout="vertical" className="login-form p-5" onFinish={onFinish}>
             <h2>L O G I N</h2>
             <hr />
@@ -51,17 +52,18 @@ function Login() {
 
             <Form.Item name='password' label='P a s s w o r d' rules={[{ required: true }]}>
               {<Input.Password placeholder="PASSWORD" />} 
-              {/* {<Input.Password
-                placeholder="input password"
-                iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
-              />} */}
+              
 
             </Form.Item>
 
 
             <button className="btnLogin mt-2 mb-3"> L o g i n</button>
             <br />
-            <Link to={'/register'}> CLICK HERE TO REGISTER </Link>
+            <Link to={'/register'} className="Linkbtn" > CLICK HERE TO REGISTER </Link>
+          <hr/>
+          
+          <Link to={'/admin/login'} className="Linkbtn" >ADMIN LOGIN</Link>
+          
 
 
           </Form>
